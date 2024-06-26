@@ -1,0 +1,10 @@
+<ul>
+    {% for l in popular_product %}
+    <li>
+        <h2>{{ l.name }}</h2>
+        <img src="{{ l.photo.url }}" width="300" height="250" alt="">
+        <p>{{ l.price }}</p>
+    </li>
+    {% endfor %}
+</ul>
+

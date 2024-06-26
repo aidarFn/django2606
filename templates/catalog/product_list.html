@@ -1,0 +1,33 @@
+{% include "../header.html" %}
+
+{% for a in popular_product %}
+<div class="card" style="width: 18rem;">
+  <img src="{{ a.photo.url }}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{ a.name }}</h5>
+    <a href="/catalog/{{ a.id }}/" class="btn btn-primary">Подробнее</a>
+    <a href="/catalog/{{ a.id }}/delete/" class="btn btn-primary">Удалить</a>
+    <br><br>
+    <a href="/catalog/{{ a.id }}/update/" class="btn btn-primary">Редактировать</a>
+  </div>
+</div>
+<br>
+{% endfor %}
+
+
+
+
+
+{% for a in popular_product %}
+    <h2>{{ a.name }}</h2>
+    <img src="{{ a.photo.url }}" width="300" height="250" alt="">
+    <p>{{ a.price }}</p>
+
+
+
+{% endfor %}
+
+
+
+
+{% include "../footer.html" %}
